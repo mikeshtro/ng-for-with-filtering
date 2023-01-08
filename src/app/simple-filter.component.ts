@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <h1>Simple filter</h1>
 
-    <select [(ngModel)]="activeFilter">
+    <select #mySelect="ngModel" ngModel="all">
       <option value="all">Show all</option>
       <option value="even">Show even</option>
       <option value="odd">Show odd</option>
@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
       <span
         *filterFor="
           let value of simpleValues;
-          activeFilter: activeFilter;
+          activeFilter: mySelect.value;
           filterBy: filterBySimpleValues
         "
       >
@@ -27,7 +27,6 @@ import { Component } from '@angular/core';
 })
 export class SimpleFilterComponent {
   protected simpleValues = [1, 2, 3, 4, 5, 6];
-  protected activeFilter: 'all' | 'even' | 'odd' = 'all';
 
   protected filterBySimpleValues(
     index: number,
