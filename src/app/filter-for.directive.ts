@@ -16,7 +16,7 @@ export interface FilterByFunction<Item, Filter> {
   hostDirectives: [
     {
       directive: NgFor,
-      inputs: ['ngForTrackBy:asgFilterForTrackBy'],
+      inputs: ['ngForTrackBy:filterForTrackBy'],
     },
   ],
 })
