@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { MessagesService } from './messages.service';
 
+/**
+ * More complicated example using data from observable and filtering by item property value
+ */
 @Component({
   selector: 'my-multi-value-filter',
   template: `

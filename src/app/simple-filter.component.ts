@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+/**
+ * Simple example component using number values and filter from select element
+ */
 @Component({
   selector: 'my-simple-filter',
   template: `
